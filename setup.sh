@@ -20,7 +20,7 @@ apt dist-upgrade -y
 # install python
 apt -y install ruby python
 gem install lolcat
-apt -y install figlet
+apt -y install figlet cpufrequtils
 
 # install wget and curl
 apt -y install wget curl
