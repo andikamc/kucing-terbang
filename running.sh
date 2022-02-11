@@ -272,9 +272,9 @@ status="$(systemctl show trojan-go --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status_text}" == "active" ]
 then
-echo -e " Trojan GO         : Trojan GO Service is "$green"running"$NC""
+echo -e " Tr0jan GO         : Tr0jan GO Service is "$green"running"$NC""
 else
-echo -e " Trojan GO         : Trojan GO Service is "$red"not running (Error)"$NC""
+echo -e " Tr0jan GO         : Tr0jan GO Service is "$red"not running (Error)"$NC""
 fi
 status="$(systemctl show xray@vlesstls.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
