@@ -17,6 +17,10 @@ chmod +x update && shc -f update -o update && rm update.*
 rm limit-speed
 wget -O limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/limit-speed.sh"
 chmod +x limit-speed && shc -f limit-speed -o limit-speed && rm limit-speed.*
+#
+rm add-trgo
+wget -O add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-trgo.sh"
+chmod +x add-trgo && shc -f add-trgo -o add-trgo && rm add-trgo.*
 
 #
 sync; echo 3 > /proc/sys/vm/drop_caches
