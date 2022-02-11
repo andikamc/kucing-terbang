@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "${EUID}" -ne 0 ]; then
+		echo "You need to run this script as root"
+		exit 1
+fi
+#
 cd /usr/bin
 rm update
 wget -O update "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update.sh"

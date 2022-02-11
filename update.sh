@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "${EUID}" -ne 0 ]; then
+		echo "You need to run this script as root"
+		exit 1
+fi
 # // Update
 apt-get -y autoremove;
 apt upgrade && apt replace -y
