@@ -7,8 +7,8 @@ systemctl stop xray
 systemctl stop xray@none
 systemctl stop xray@vless
 systemctl stop xray@vnone
-/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+openssl genrsa -out /etc/v2ray/v2ray.key
+openssl req -new -x509 -days 3650 -key /etc/v2ray/v2ray.key -out /etc/v2ray/v2ray.crt -subj "/C=ID/CN=$domain"
 systemctl start xray
 systemctl start xray@none
 systemctl start xray@vless

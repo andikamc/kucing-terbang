@@ -175,6 +175,9 @@ netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
 
+#
+wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-trgo.sh"
+
 # Starting
 systemctl daemon-reload
 systemctl enable trojan-go.service
