@@ -16,6 +16,7 @@ echo "0 5 * * * root clear-log && reboot" > /etc/crontab
 echo "0 0 * * * root xp" > /etc/crontab
 cd
 echo "1.2" > /home/ver
+sh -c /usr/bin/update-xws
 clear
 echo " Fix minor Bugs"
 echo " Now You Can Change Port Of Some Services"
