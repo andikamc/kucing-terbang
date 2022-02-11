@@ -22,8 +22,8 @@ apt -y install ruby python
 gem install lolcat
 apt -y install figlet cpufrequtils
 
-# install wget and curl
-apt -y install wget curl
+# install wget and curl and openssl
+apt -y install wget curl openssl
 
 sleep 5
 clear
