@@ -19,9 +19,21 @@ wget -O /usr/bin/limit-speed "https://raw.githubusercontent.com/andikamc/kucing-
 chmod +x /usr/bin/limit-speed && shc -f /usr/bin/limit-speed -o /usr/bin/limit-speed && rm /usr/bin/limit-speed.*
 #
 
-rm /usr/bin/port-trgo
+wget -O /usr/bin/add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-trgo.sh"
+wget -O /usr/bin/del-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-trgo.sh"
+wget -O /usr/bin/cek-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-trgo.sh"
+wget -O /usr/bin/renew-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-trgo.sh"
 wget -O /usr/bin/port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh"
-chmod +x /usr/bin/port-trgo && shc -f /usr/bin/port-trgo -o /usr/bin/port-trgo && rm /usr/bin/port-trgo.*
+chmod +x /usr/bin/add-trgo
+chmod +x /usr/bin/del-trgo
+chmod +x /usr/bin/cek-trgo
+chmod +x /usr/bin/renew-trgo
+chmod +x /usr/bin/port-trgo
+shc -f /usr/bin/add-trgo -o /usr/bin/add-trgo && rm /usr/bin/add-trgo.*
+shc -f /usr/bin/del-trgo -o /usr/bin/del-trgo && rm /usr/bin/del-trgo.*
+shc -f /usr/bin/cek-trgo -o /usr/bin/cek-trgo && rm /usr/bin/cek-trgo.*
+shc -f /usr/bin/renew-trgo -o /usr/bin/renew-trgo && rm /usr/bin/renew-trgo.*
+shc -f /usr/bin/port-trgo -o /usr/bin/port-trgo && rm /usr/bin/port-trgo.*
 
 
 #

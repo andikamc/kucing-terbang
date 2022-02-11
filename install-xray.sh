@@ -790,65 +790,65 @@ cd /usr/bin
 wget -O add-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xws.sh"
 wget -O add-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xray.sh"
 wget -O add-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xvless.sh"
-wget -O add-xtrgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xtrgo.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-trgo.sh"
 wget -O del-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xws.sh"
 wget -O del-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xvless.sh"
 wget -O del-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xray.sh"
-wget -O del-xtrgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xtrgo.sh"
+wget -O del-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-trgo.sh"
 wget -O cek-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xws.sh"
 wget -O cek-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xvless.sh"
 wget -O cek-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xray.sh"
-wget -O cek-xtrgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xtrgo.sh"
+wget -O cek-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-trgo.sh"
 wget -O renew-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xws.sh"
 wget -O renew-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xray.sh"
 wget -O renew-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xvless.sh"
-wget -O renew-xtrgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xtrgo.sh"
+wget -O renew-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-trgo.sh"
 wget -O xcert "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xcert.sh"
-wget -O port-xtrgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xtrgo.sh"
+wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh"
 wget -O port-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xvless.sh"
 wget -O port-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xws.sh"
 wget -O port-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xray.sh"
 chmod +x add-xws
 chmod +x add-xray
 chmod +x add-xvless
-chmod +x add-xtrgo
+chmod +x add-trgo
 chmod +x del-xws
 chmod +x del-xvless
-chmod +x del-xtrgo
+chmod +x del-trgo
 chmod +x del-xray
 chmod +x cek-xws
 chmod +x cek-xvless
-chmod +x cek-xtrgo
+chmod +x cek-trgo
 chmod +x cek-xray
 chmod +x renew-xws
 chmod +x renew-xray
 chmod +x renew-xvless
-chmod +x renew-xtrgo
+chmod +x renew-trgo
 chmod +x port-xray
 chmod +x port-xws
 chmod +x port-xvless
-chmod +x port-xtrgo
+chmod +x port-trgo
 chmod +x xcert
 shc -f add-xws -o add-xws && rm add-xws.*
 shc -f add-xray -o add-xray && rm add-xray.*
 shc -f add-xvless -o add-xvless && rm add-xvless.*
-shc -f add-xtrgo -o add-xtrgo && rm add-xtrgo.*
+shc -f add-trgo -o add-trgo && rm add-trgo.*
 shc -f del-xws -o del-xws && rm del-xws.*
 shc -f del-xvless -o del-xvless && rm del-xvless.*
-shc -f del-xtrgo -o del-xtrgo && rm del-xtrgo.*
+shc -f del-trgo -o del-trgo && rm del-trgo.*
 shc -f del-xray -o del-xray && rm del-xray.*
 shc -f cek-xws -o cek-xws && rm cek-xws.*
 shc -f cek-xvless -o cek-xvless && rm cek-xvless.*
-shc -f cek-xtrgo -o cek-xtrgo && rm cek-xtrgo.*
+shc -f cek-trgo -o cek-trgo && rm cek-trgo.*
 shc -f cek-xray -o cek-xray && rm cek-xray.*
 shc -f renew-xws -o renew-xws && rm renew-xws.*
 shc -f renew-xray -o renew-xray && rm renew-xray.*
 shc -f renew-xvless -o renew-xvless && rm renew-xvless.*
-shc -f renew-xtrgo -o renew-xtrgo && rm renew-xtrgo.*
+shc -f renew-trgo -o renew-trgo && rm renew-trgo.*
 shc -f port-xray -o port-xray && rm port-xray.*
 shc -f port-xws -o port-xws && rm port-xws.*
 shc -f port-xvless -o port-xvless && rm port-xvless.*
-shc -f port-xtrgo -o port-xtrgo && rm port-xtrgo.*
+shc -f port-trgo -o port-trgo && rm port-trgo.*
 shc -f xcert -o xcert && rm xcert.*
 cd
 rm -f install-xray.sh
