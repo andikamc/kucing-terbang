@@ -20,4 +20,17 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 systemd-resolve --flush-caches
 #
 
+# clear cache
+apt update --fix-missing && \
+    rm /etc/timezone && \
+    echo "Asia/Jakarta" | sudo tee /etc/timezone && \
+    rm -rf /tmp/* && \
+    apt -y autoclean && \
+    apt -yqq autoremove && \
+    apt -y clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    touch /var/log/installed.log && \
+    rm /var/log/*.log
+#
+
 sleep 5
