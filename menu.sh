@@ -135,7 +135,7 @@ ram
 reboot
 ;;
 24)
-speedtest
+speedtest -s 797
 ;;
 25)
 update
