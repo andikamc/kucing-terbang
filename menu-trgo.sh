@@ -17,16 +17,16 @@ read -p "     Please Input Number  [1-4 or x] :  "  trojan
 echo -e ""
 case $trojan in
 1)
-add-xtrgo
+add-trgo
 ;;
 2)
-del-xtrgo
+del-trgo
 ;;
 3)
-renew-xtrgo
+renew-trgo
 ;;
 4)
-cek-xtrgo
+cek-trgo
 ;;
 x)
 menu
