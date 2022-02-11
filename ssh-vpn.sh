@@ -234,6 +234,7 @@ wget -O ram "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ra
 wget -O renew "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew.sh"
 wget -O autokill "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ceklim.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/limit-speed.sh"
 wget -O tendang "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/tendang.sh"
 wget -O change-port "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/change.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-ovpn.sh"
@@ -296,6 +297,7 @@ chmod +x about && shc -f about -o about && rm about.*
 chmod +x autokill && shc -f autokill -o autokill && rm autokill.*
 chmod +x tendang && shc -f tendang -o tendang && rm tendang.*
 chmod +x ceklim && shc -f ceklim -o ceklim && rm ceklim.*
+chmod +x limit-speed && shc -f limit-speed -o limit-speed && rm limit-speed.*
 chmod +x ram && shc -f ram -o ram && rm ram.*
 chmod +x renew && shc -f renew -o renew && rm renew.*
 chmod +x change-port && shc -f change-port -o change-port && rm change-port.*

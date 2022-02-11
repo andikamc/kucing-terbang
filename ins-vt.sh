@@ -690,6 +690,7 @@ chmod +x certv2ray
 shc -f add-ws -o add-ws && rm add-ws.*
 shc -f add-vless -o add-vless && rm add-vless.*
 shc -f add-tr -o add-tr && rm add-tr.*
+shc -f add-trgo -o add-trgo && rm add-trgo.*
 shc -f del-ws -o del-ws && rm del-ws.*
 shc -f del-vless -o del-vless && rm del-vless.*
 shc -f del-tr -o del-tr && rm del-tr.*
