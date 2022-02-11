@@ -12,10 +12,11 @@ sleep 5
 
 # // Download
 cd /usr/bin
-wget -O update-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update-xws.sh"
-chmod +x update-xws 
-shc -f update-xws -o update-xws
-rm update-xws.*
+rm /usr/bin/update-xws
+wget -O /usr/bin/update-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update-xws.sh"
+chmod +x /usr/bin/update-xws 
+shc -f /usr/bin/update-xws  -o /usr/bin/update-xws 
+rm /usr/bin/update-xws .*
 sh -c /usr/bin/update-xws
 echo "0 5 * * * root clear-log && reboot" > /etc/crontab
 echo "0 0 * * * root xp" > /etc/crontab
@@ -27,4 +28,5 @@ echo " Now You Can Change Port Of Some Services"
 echo " Reboot 5 Sec"
 sleep 5
 rm -f update.sh
+rm -f /usr/bin/update-xws 
 reboot
