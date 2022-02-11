@@ -21,9 +21,9 @@ touch /etc/trojan-go/uuid.txt
 mkdir -p /etc/trojan-go/
 chmod 777 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /etc/trojan-go/trojan-go https://raw.githubusercontent.com/andikamc/kucing-terbang/master/trojan-go
-wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/andikamc/kucing-terbang/master/geoip.dat
-wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/andikamc/kucing-terbang/master/geosite.dat
+wget -O /etc/trojan-go/trojan-go https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/trojan-go
+wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/geoip.dat
+wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/geosite.dat
 chmod +x /etc/trojan-go/trojan-go
 cat <<EOF > /etc/trojan-go/config.json
 {
@@ -40,12 +40,12 @@ cat <<EOF > /etc/trojan-go/config.json
   "disable_http_check": false,
   "udp_timeout": 60,
   "ssl": {
-    "verify": true,
-    "verify_hostname": true,
+    "verify": false,
+    "verify_hostname": false,
     "cert": "/etc/v2ray/v2ray.crt",
     "key": "/etc/v2ray/v2ray.key",
     "key_password": "",
-    "cipher": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+    "cipher": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:ALL",
     "curves": "",
     "prefer_server_cipher": true,
     "sni": "$domain",
@@ -81,7 +81,7 @@ cat <<EOF > /etc/trojan-go/config.json
   },
   "websocket": {
     "enabled": true,
-    "path": "/brody",
+    "path": "/dktrgo",
     "host": "$domain"
   },
   "shadowsocks": {
@@ -176,7 +176,7 @@ netfilter-persistent reload
 systemctl daemon-reload
 
 #
-wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-trgo.sh"
+wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh"
 shc -f port-trgo -o port-trgo && rm port-trgo.*
 
 # Starting

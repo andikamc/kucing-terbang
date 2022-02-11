@@ -276,22 +276,22 @@ mkdir -p /run/pluto
 service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
-wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-l2tp.sh 
+wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-l2tp.sh 
 chmod +x /usr/bin/add-l2tp
 shc -f /usr/bin/add-l2tp -o /usr/bin/add-l2tp && rm /usr/bin/add-l2tp.*
-wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-l2tp.sh 
+wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-l2tp.sh 
 chmod +x /usr/bin/del-l2tp
 shc -f /usr/bin/del-l2tp -o /usr/bin/del-l2tp && rm /usr/bin/del-l2tp.*
-wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-pptp.sh 
+wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-pptp.sh 
 chmod +x /usr/bin/add-pptp
 shc -f /usr/bin/add-pptp -o /usr/bin/add-pptp && rm /usr/bin/add-pptp.*
-wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-pptp.sh 
+wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-pptp.sh 
 chmod +x /usr/bin/del-pptp
 shc -f /usr/bin/del-pptp -o /usr/bin/del-pptp && rm /usr/bin/del-pptp.*
-wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-pptp.sh 
+wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-pptp.sh 
 chmod +x /usr/bin/renew-pptp
 shc -f /usr/bin/renew-pptp -o /usr/bin/renew-pptp && rm /usr/bin/renew-pptp.*
-wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-l2tp.sh 
+wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-l2tp.sh 
 chmod +x /usr/bin/renew-l2tp
 shc -f /usr/bin/renew-l2tp -o /usr/bin/renew-l2tp && rm /usr/bin/renew-l2tp.*
 touch /var/lib/premium-script/data-user-l2tp

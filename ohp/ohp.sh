@@ -27,7 +27,7 @@ Port_ssh='8383';
 
 # Installing ohp Server
 cd 
-wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ohp/ohp"
+wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/ohp/ohp"
 chmod +x /usr/local/bin/ohp
 
 # Buat File OpenVPN TCP OHP

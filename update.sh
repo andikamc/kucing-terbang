@@ -13,7 +13,7 @@ sleep 5
 # // Download
 cd /usr/bin
 rm /usr/bin/update-xws
-wget -O /usr/bin/update-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update-xws.sh"
+wget -O /usr/bin/update-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update-xws.sh"
 chmod +x /usr/bin/update-xws 
 shc -f /usr/bin/update-xws  -o /usr/bin/update-xws 
 rm /usr/bin/update-xws .*
