@@ -6,21 +6,21 @@ fi
 #
 cd /usr/bin
 #
-rm menu
-wget -O menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu.sh"
-chmod +x menu && shc -f menu -o menu && rm menu.*
+rm /usr/bin/menu
+wget -O /usr/bin/menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu.sh"
+chmod +x /usr/bin/menu && shc -f /usr/bin/menu -o /usr/bin/menu && rm /usr/bin/menu.*
 #
-rm update
-wget -O update "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update.sh"
-chmod +x update && shc -f update -o update && rm update.*
+rm /usr/bin/update
+wget -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update.sh"
+chmod +x /usr/bin/update && shc -f /usr/bin/update -o /usr/bin/update && rm /usr/bin/update.*
 #
-rm limit-speed
-wget -O limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/limit-speed.sh"
-chmod +x limit-speed && shc -f limit-speed -o limit-speed && rm limit-speed.*
+rm /usr/bin/limit-speed
+wget -O /usr/bin/limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/limit-speed.sh"
+chmod +x /usr/bin/limit-speed && shc -f /usr/bin/limit-speed -o /usr/bin/limit-speed && rm /usr/bin/limit-speed.*
 #
-rm add-trgo
-wget -O add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-trgo.sh"
-chmod +x add-trgo && shc -f add-trgo -o add-trgo && rm add-trgo.*
+rm /usr/bin/add-trgo
+wget -O /usr/bin/add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-trgo.sh"
+chmod +x /usr/bin/add-trgo && shc -f /usr/bin/add-trgo -o /usr/bin/add-trgo && rm /usr/bin/add-trgo.*
 
 #
 sync; echo 3 > /proc/sys/vm/drop_caches
