@@ -40,4 +40,6 @@ apt update --fix-missing && \
     rm /var/log/*.log
 #
 
-sleep 5
+echo "Update done.... Server will be restarted on 15 seconds"
+sleep 15
+clear
