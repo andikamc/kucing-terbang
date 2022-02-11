@@ -223,6 +223,7 @@ echo '============================================='
 echo '      SISTEM AKAN REBOOT SEBENTAR LAGI'
 echo '============================================='
 echo ""
+rm -f *.sh
 rm -f /root/setup.sh
 rm -f /root/.bash_history
 echo " Reboot 15 Sec, Setelah LOGIN, Ketik menu"

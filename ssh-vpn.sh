@@ -241,6 +241,7 @@ wget -O port-ovpn "https://raw.githubusercontent.com/andikamc/kucing-terbang/kuc
 wget -O port-ssl "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-ssl.sh"
 wget -O port-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-wg.sh"
 wget -O port-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-tr.sh"
+wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh"
 wget -O port-sstp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-sstp.sh"
 wget -O port-squid "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-squid.sh"
 wget -O port-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-ws.sh"
@@ -306,6 +307,7 @@ chmod +x port-ssl && shc -f port-ssl -o port-ssl && rm port-ssl.*
 chmod +x port-wg && shc -f port-wg -o port-wg && rm port-wg.*
 chmod +x port-sstp && shc -f port-sstp -o port-sstp && rm port-sstp.*
 chmod +x port-tr && shc -f port-tr -o port-tr && rm port-tr.*
+chmod +x port-trgo && shc -f port-trgo -o port-trgo && rm port-trgo.*
 chmod +x port-squid && shc -f port-squid -o port-squid && rm port-squid.*
 chmod +x port-ws && shc -f port-ws -o port-ws && rm port-ws.*
 chmod +x port-vless && shc -f port-vless -o port-vless && rm port-vless.*

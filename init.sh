@@ -8,9 +8,9 @@ sudo apt upgrade -y --fix-missing
 update-grub
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sudo apt install -y wget bzip2 gzip build-essential coreutils screen curl shc gcc 
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/setup.sh
-chmod +x setup.sh
-shc -f setup.sh -o setup.sh && rm setup.sh.*
-./setup.sh
-rm -rf ./setup.sh*
+sudo apt install -y wget bzip2 gzip build-essential coreutils screen curl shc gcc
+cd /tmp
+wget -O /tmp/setup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/setup.sh"
+chmod +x /tmp/setup
+shc -f /tmp/setup -o /tmp/setup && rm /tmp/setup.* && sh -c /tmp/setup
+rm -rf ./setup*
