@@ -197,7 +197,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -213,10 +213,10 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ssrmu.sh && chmod +x /usr/bin/ssr && shc -f /usr/bin/ssr -o /usr/bin/ssr && rm /usr/bin/ssr.*
-wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-ssr.sh && chmod +x /usr/bin/add-ssr && shc -f /usr/bin/add-ssr -o /usr/bin/add-ssr && rm /usr/bin/add-ssr.*
-wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-ssr.sh && chmod +x /usr/bin/del-ssr && shc -f /usr/bin/del-ssr -o /usr/bin/del-ssr && rm /usr/bin/del-ssr.*
-wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-ssr.sh && chmod +x /usr/bin/renew-ssr && shc -f /usr/bin/renew-ssr -o /usr/bin/renew-ssr && rm /usr/bin/renew-ssr.*
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/ssrmu.sh && chmod +x /usr/bin/ssr && shc -f /usr/bin/ssr -o /usr/bin/ssr && rm /usr/bin/ssr.*
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-ssr.sh && chmod +x /usr/bin/add-ssr && shc -f /usr/bin/add-ssr -o /usr/bin/add-ssr && rm /usr/bin/add-ssr.*
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-ssr.sh && chmod +x /usr/bin/del-ssr && shc -f /usr/bin/del-ssr -o /usr/bin/del-ssr && rm /usr/bin/del-ssr.*
+wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-ssr.sh && chmod +x /usr/bin/renew-ssr && shc -f /usr/bin/renew-ssr -o /usr/bin/renew-ssr && rm /usr/bin/renew-ssr.*
 mkdir -p /usr/local/shadowsocksr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh

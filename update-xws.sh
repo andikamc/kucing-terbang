@@ -7,15 +7,15 @@ fi
 cd /usr/bin
 #
 rm /usr/bin/menu
-wget -O /usr/bin/menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu.sh"
+wget -O /usr/bin/menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu.sh"
 chmod +x /usr/bin/menu && shc -f /usr/bin/menu -o /usr/bin/menu && rm /usr/bin/menu.*
 #
 rm /usr/bin/update
-wget -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update.sh"
+wget -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
 chmod +x /usr/bin/update && shc -f /usr/bin/update -o /usr/bin/update && rm /usr/bin/update.*
 #
 rm /usr/bin/limit-speed
-wget -O /usr/bin/limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/limit-speed.sh"
+wget -O /usr/bin/limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/limit-speed.sh"
 chmod +x /usr/bin/limit-speed && shc -f /usr/bin/limit-speed -o /usr/bin/limit-speed && rm /usr/bin/limit-speed.*
 
 #

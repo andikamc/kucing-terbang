@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/go.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/go.sh
 chmod +x go.sh
 shc -f go.sh -o go.sh
 ./go.sh
@@ -661,19 +661,19 @@ systemctl restart v2ray
 systemctl enable v2ray
 systemctl start v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr

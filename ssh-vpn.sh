@@ -22,7 +22,7 @@ organizationalunit=RAHCHIEL.xyz
 commonname=RAHCHIEL.xyz
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -89,14 +89,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -126,7 +126,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -180,7 +180,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -218,59 +218,59 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/about.sh"
-wget -O menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/info.sh"
-wget -O ram "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ceklim.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/limit-speed.sh"
-wget -O tendang "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/tendang.sh"
-wget -O change-port "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-vless.sh"
-wget -O port-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-xray.sh"
-wget -O wbmn "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/xp.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-vless.sh"
-wget -O menu-l2tp "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-l2tp.sh"
-wget -O menu-pptp "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-pptp.sh"
-wget -O menu-sstp "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-sstp.sh"
-wget -O menu-ss "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-ss.sh"
-wget -O menu-ssr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-ssr.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-trojan.sh"
-wget -O menu-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-wg.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-ssh.sh"
-wget -O menu-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-xray.sh"
-wget -O running "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/running.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-trgo.sh"
-wget -O add-dom "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cf/add-dom.sh"
-wget -O add-cff "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cf/add-cff.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cf/add-cfh.sh"
-wget -O menu-cf "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-cf.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/kernel-updt.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/autoreboot.sh"
-wget -O update "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/update.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-trgo.sh"
-wget -O menu-xx "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-xx.sh"
-wget -O bbr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/bbr.sh"
+wget -O add-host "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/about.sh"
+wget -O menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/member.sh"
+wget -O delete "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/info.sh"
+wget -O ram "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/ceklim.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/limit-speed.sh"
+wget -O tendang "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/tendang.sh"
+wget -O change-port "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-vless.sh"
+wget -O port-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xray.sh"
+wget -O wbmn "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xp.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-vless.sh"
+wget -O menu-l2tp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-l2tp.sh"
+wget -O menu-pptp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-pptp.sh"
+wget -O menu-sstp "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-sstp.sh"
+wget -O menu-ss "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-ss.sh"
+wget -O menu-ssr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-ssr.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-trojan.sh"
+wget -O menu-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-wg.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-ssh.sh"
+wget -O menu-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-xray.sh"
+wget -O running "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/running.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-trgo.sh"
+wget -O add-dom "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cf/add-dom.sh"
+wget -O add-cff "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cf/add-cff.sh"
+wget -O add-cfh "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cf/add-cfh.sh"
+wget -O menu-cf "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-cf.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/kernel-updt.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/autoreboot.sh"
+wget -O update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-trgo.sh"
+wget -O menu-xx "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-xx.sh"
+wget -O bbr "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/bbr.sh"
 chmod +x bbr && shc -f bbr -o bbr && rm bbr.*
 chmod +x menu-xx && shc -f menu-xx -o menu-xx && rm menu-xx.*
 chmod +x menu-trgo && shc -f menu-trgo -o menu-trgo && rm menu-trgo.*
