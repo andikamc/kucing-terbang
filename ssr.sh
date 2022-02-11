@@ -171,12 +171,12 @@ Download_SSR(){
 }
 Service_SSR(){
 if [[ ${OS} = "centos" ]]; then
-wget --no-check-certificate https://raw.githubusercontent.com/hybtoy/ssrrmu/master/ssrmu_centos -O /etc/init.d/ssrmu
+wget --no-check-certificate https://raw.githubusercontent.com/andikamc/ssrrmu/master/ssrmu_centos -O /etc/init.d/ssrmu
 chmod +x /etc/init.d/ssrmu
 chkconfig --add ssrmu
 chkconfig ssrmu on
 else
-wget --no-check-certificate https://raw.githubusercontent.com/hybtoy/ssrrmu/master/ssrmu_debian -O /etc/init.d/ssrmu
+wget --no-check-certificate https://raw.githubusercontent.com/andikamc/ssrrmu/master/ssrmu_debian -O /etc/init.d/ssrmu
 chmod +x /etc/init.d/ssrmu
 update-rc.d -f ssrmu defaults
 fi
@@ -217,5 +217,6 @@ wget -O /usr/bin/ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/m
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-ssr.sh && chmod +x /usr/bin/add-ssr
 wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-ssr.sh && chmod +x /usr/bin/del-ssr
 wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
+mkdir -p /usr/local/shadowsocksr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
