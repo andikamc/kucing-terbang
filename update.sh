@@ -5,7 +5,7 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 # // Update
 apt-get -y autoremove;
-apt upgrade && apt replace -y
+apt upgrade
 
 echo "Start Update"
 sleep 5
