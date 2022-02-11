@@ -12,10 +12,10 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-trojango="$(cat ~/log-install.txt | grep -i Tr0jan GO | cut -d: -f2|sed 's/ //g')"
-trojango="$(cat ~/log-install.txt | grep -w "Tr0jan GO" | cut -d: -f2|sed 's/ //g')"
+trojango="$(cat ~/log-install.txt | grep -i Tr0jan-GO | cut -d: -f2|sed 's/ //g')"
+trojango="$(cat ~/log-install.txt | grep -w "Tr0jan-GO" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-                echo "Name : Create Tr0jan GO Account"
+                echo "Name : Create Tr0jan-GO Account"
 		echo "=================================="
 		read -rp "Password : " -e user
 		user_EXISTS=$(grep -w $user /etc/trojan-go/akun.conf | wc -l)

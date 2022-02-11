@@ -37,7 +37,7 @@ echo -e "\e[1;31m* [8]\e[0m  \e[1;32m: VMESS PANEL\e[0m"
 echo -e "\e[1;31m* [9]\e[0m  \e[1;32m: VLESS PANEL\e[0m"
 echo -e "\e[1;31m* [10]\e[0m \e[1;32m: XRAY PANEL\e[0m"
 echo -e "\e[1;31m* [11]\e[0m \e[1;32m: TROJAN PANEL\e[0m"
-echo -e "\e[1;31m* [12]\e[0m \e[1;32m: TR0JAN GO PANEL\e[0m"
+echo -e "\e[1;31m* [12]\e[0m \e[1;32m: TR0JAN-GO PANEL\e[0m"
 echo -e ""
 echo -e "\e[1;33m=============================-SYSTEM-===========================\e[0m" | lolcat
 echo -e "\e[1;31m* [13]\e[0m \e[1;32m: Add Or Change Subdomain Host For VPS\e[0m"

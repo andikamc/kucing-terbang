@@ -197,7 +197,7 @@ echo "   - XRAY VMESS NONE TCP     : 6464"  | tee -a log-install.txt
 echo "   - XRAY VMESS TCP          : 6363"  | tee -a log-install.txt
 echo "   - XRAY VMESS KCP          : 6161"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
-echo "   - Tr0jan GO               : 2096"  | tee -a log-install.txt
+echo "   - Tr0jan-GO               : 2096"  | tee -a log-install.txt
 echo "   - Netflix Set ON"  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Malaysia (UTC +8)"  | tee -a log-install.txt

@@ -53,7 +53,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 EOF
 
-# // Installing Trojan Go
+# // Installing Tr0jan-GO
 wget https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/plugin-xray.sh
 chmod +x plugin-xray.sh
 shc -f plugin-xray -o plugin-xray && rm plugin-xray.*

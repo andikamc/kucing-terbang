@@ -9,7 +9,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Renew Tr0jan Go Account"
+		echo "Name : Renew Tr0jan-GO Account"
 	        echo -e "===============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1

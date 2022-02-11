@@ -5,8 +5,8 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
 clear
-tr="$(cat ~/log-install.txt | grep -w "Tr0jan GO" | cut -d: -f2|sed 's/ //g')"
-echo -e "Name : Change Port Tr0jan GO"
+tr="$(cat ~/log-install.txt | grep -w "Tr0jan-GO" | cut -d: -f2|sed 's/ //g')"
+echo -e "Name : Change Port Tr0jan-GO"
 echo -e "============================" | lolcat
 echo -e "Change Port $tr"
 read -p "New Port Trojan-go: " tr2
@@ -17,7 +17,7 @@ fi
 cek=$(netstat -nutlp | grep -w $tr2)
 if [[ -z $cek ]]; then
 sed -i "s/$tr/$tr2/g" /etc/trojan-go/config.json
-sed -i "s/   - Tr0jan GO                  : $tr/   - Tr0jan GO                  : $tr2/g" /root/log-install.txt
+sed -i "s/   - Tr0jan-GO                  : $tr/   - Tr0jan-GO                  : $tr2/g" /root/log-install.txt
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $tr -j ACCEPT
 iptables -D INPUT -m state --state NEW -m udp -p udp --dport $tr -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $tr2 -j ACCEPT

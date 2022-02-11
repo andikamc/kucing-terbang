@@ -1,5 +1,5 @@
 #!/bin/bash
-# Trojan Go Auto Setup 
+# Tr0jan-GO Auto Setup 
 # =========================
 red='\e[1;31m'
 green='\e[0;32m'
@@ -12,12 +12,12 @@ domain=$(cat /etc/v2ray/domain)
 # Uuid Service
 uuid=$(cat /proc/sys/kernel/random/uuid)
 
-# Trojan Go Akun 
+# Tr0jan-GO Akun 
 mkdir -p /etc/trojan-go/
 touch /etc/trojan-go/akun.conf
 touch /etc/trojan-go/uuid.txt
 
-# Installing Trojan Go
+# Installing Tr0jan-GO
 mkdir -p /etc/trojan-go/
 chmod 777 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
