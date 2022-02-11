@@ -164,6 +164,7 @@ LimitNOFILE=infinity
 
 [Install]
 WantedBy=multi-user.target
+EOF
 
 cat <<EOF > /etc/trojan-go/uuid.txt
 $uuid

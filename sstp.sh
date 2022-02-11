@@ -1,6 +1,7 @@
 #!/bin/bash
 MYIP=$(wget -qO- ipinfo.io/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
+domain=$IP
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 OS=$ID
@@ -22,12 +23,12 @@ mkdir /home/sstp
 touch /home/sstp/sstp_account
 touch /var/lib/premium-script/data-user-sstp
 #detail nama perusahaan
-country=MY
-state=Malaysia
-locality=Malaysia
-organization=RAHCHIEL.xyz
-organizationalunit=RAHCHIEL.xyz
-commonname=RAHCHIEL.xyz
+country=ID
+state=JAKARTA
+locality=ID
+organization=$domain
+organizationalunit=$domain
+commonname=$domain
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
@@ -46,13 +47,15 @@ systemctl start accel-ppp
 systemctl enable accel-ppp
 #gen cert sstp
 cd /home/sstp
+
 openssl genrsa -out ca.key 4096
-openssl req -new -x509 -days 3650 -key ca.key -out ca.crt \
--subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
+openssl req -new -x509 -days 3650 -key ca.key -out ca.crt -subj "/C=ID"
+openssl req -new -x509 -days 3650 -key ca.key -out ca.crt -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
+
 openssl genrsa -out server.key 4096
-openssl req -new -key server.key -out ia.csr \
--subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
+openssl req -new -key server.key -out ia.csr -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
 openssl x509 -req -days 3650 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out server.crt
+
 cp /home/sstp/server.crt /home/vps/public_html/server.crt
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 444 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 444 -j ACCEPT
