@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Create swap
+swapoff /.swap
+rm /.swap
+fallocate -l 4G /.swap
+chmod 600 /.swap
+mkswap /.swap
+swapon /.swap
+echo '/.swap none swap sw 0 0' | sudo tee -a /etc/fstab
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf
+sysctl -p
+
 # install text 
 apt update -y
 apt upgrade -y
@@ -176,6 +188,7 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo ""
+cp log-install.txt /root/log-install.txt
 
 sleep 3
 echo '============================================='
