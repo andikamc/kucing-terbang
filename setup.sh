@@ -218,6 +218,47 @@ echo ""
 cp log-install.txt /root/log-install.txt
 sh -c /usr/bin/certv2ray
 
+#
+# Clear Memory Command
+echo "#!/bin/sh -e" > /usr/local/bin/clear-memory
+echo "echo \"Clearing Memory...\"" > /usr/local/bin/clear-memory
+echo "sync; echo 3 > /proc/sys/vm/drop_caches" >> /usr/local/bin/clear-memory
+echo "# Auto Clear Memory" > /etc/cron.d/clear-memory
+echo "*/60 * * * * root /usr/local/bin/clear-memory" >> /etc/cron.d/clear-memory
+chmod +x /usr/local/bin/clear-memory
+
+# Fix syslog big file
+echo "#!/bin/sh -e" > /usr/local/bin/clear-log
+echo "rm /var/log/syslog" >> /usr/local/bin/clear-log
+echo "touch /var/log/syslog" >> /usr/local/bin/clear-log
+echo "chown syslog:adm /var/log/syslog" >> /usr/local/bin/clear-log
+echo "systemctl restart rsyslog" >> /usr/local/bin/clear-log
+echo "# Auto Clear SYSLOG" > /etc/cron.d/clear-log
+echo "*/30 * * * * root /usr/local/bin/clear-log" >> /etc/cron.d/clear-log
+chmod +x /usr/local/bin/clear-log
+#
+
+# Auto restart service (Trojan & Tr0jan-GO)
+echo "#!/bin/sh -e" > /usr/local/bin/auto-restart
+echo "systemctl restart trojan" >> /usr/local/bin/auto-restart
+echo "systemctl restart trojan-go" >> /usr/local/bin/auto-restart
+echo "# Auto Restart Service" > /etc/cron.d/auto-restart
+echo "30 01 * * * root /usr/local/bin/auto-restart" >> /etc/cron.d/auto-restart
+chmod +x /usr/local/bin/auto-restart
+#
+
+# clear cache
+rm /etc/timezone && \
+echo "Asia/Jakarta" | sudo tee /etc/timezone && \
+rm -rf /tmp/* && \
+apt -y autoclean && \
+apt -yqq autoremove && \
+apt -y clean && \
+rm -rf /var/lib/apt/lists/* && \
+touch /var/log/installed.log && \
+rm /var/log/*.log
+#
+
 sleep 3
 echo '============================================='
 echo '      SISTEM AKAN REBOOT SEBENTAR LAGI'
@@ -226,6 +267,7 @@ echo ""
 rm -f *.sh
 rm -f /root/setup.sh
 rm -f /root/.bash_history
+timedatectl set-timezone Asia/Jakarta
 echo " Reboot 15 Sec, Setelah LOGIN, Ketik menu"
 sleep 15
 reboot

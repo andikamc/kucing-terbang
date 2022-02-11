@@ -39,4 +39,3 @@ rm /var/log/*.log
 echo "Update done.... Server will be restarted on 15 seconds"
 sleep 15
 clear
-reboot
