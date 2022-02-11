@@ -177,6 +177,7 @@ systemctl daemon-reload
 
 #
 wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/port-trgo.sh"
+shc -f port-trgo -o port-trgo && rm port-trgo.*
 
 # Starting
 systemctl daemon-reload

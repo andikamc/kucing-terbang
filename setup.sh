@@ -71,42 +71,69 @@ clear
 echo '============================================='
 echo '        Installing SSH & OPENVPN '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ssh-vpn.sh
+chmod +x ssh-vpn.sh
+shc -f ssh-vpn.sh -o ssh-vpn.sh && rm ssh-vpn.sh.*
+screen -S ssh-vpn ./ssh-vpn.sh
 echo '============================================='
 echo '        Installing SSTP '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/sstp.sh
+chmod +x sstp.sh
+shc -f sstp.sh -o sstp.sh && rm sstp.sh.*
+screen -S sstp ./sstp.sh
 echo '============================================='
 echo '        Installing ssr '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ssr.sh
+chmod +x ssr.sh
+shc -f ssr.sh -o ssr.sh && rm ssr.sh.*
+screen -S ssr ./ssr.sh
 echo '============================================='
 echo '        Installing shadowsocksobfs '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/sodosok.sh
+chmod +x sodosok.sh
+shc -f sodosok.sh -o sodosok.sh && rm sodosok.sh.*
+screen -S ss ./sodosok.sh
 echo '============================================='
 echo '        Installing WIREGUARD '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/wg.sh
+chmod +x wg.sh
+shc -f wg.sh -o wg.sh && rm wg.sh.*
+screen -S wg ./wg.sh
 echo '============================================='
 echo '        Installing V2RAY '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ins-vt.sh
+chmod +x ins-vt.sh
+shc -f ins-vt.sh -o ins-vt.sh && rm ins-vt.sh.*
+screen -S v2ray ./ins-vt.sh
 echo '============================================='
 echo '        Installing ipsec '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ipsec.sh
+chmod +x ipsec.sh
+shc -f ipsec.sh -o ipsec.sh && rm ipsec.sh.*
+screen -S ipsec ./ipsec.sh
 echo '        Installing XRAY '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/install-xray.sh && chmod +x install-xray.sh && screen -S xray ./install-xray.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/install-xray.sh
+chmod +x install-xray.sh
+shc -f install-xray.sh -o install-xray.sh && rm install-xray.sh.*
+screen -S xray ./install-xray.sh
 echo '============================================='
 echo '        Installing Websocket '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/websocket/websocket.sh
+chmod +x websocket.sh && ./websocket.sh
 echo '        Installing OHP '
 echo '============================================='
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ohp/ohp.sh
+chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/set-br.sh
+chmod +x set-br.sh && ./set-br.sh
 echo '============================================='
 
 rm -f /root/ssh-vpn.sh

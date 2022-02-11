@@ -54,9 +54,15 @@ WantedBy=multi-user.target
 EOF
 
 # // Installing Trojan Go
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/plugin-xray.sh && chmod +x plugin-xray.sh && ./plugin-xray.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/plugin-xray.sh
+chmod +x plugin-xray.sh
+shc -f plugin-xray -o plugin-xray && rm plugin-xray.*
+./plugin-xray.sh
 rm -f /root/plugin-xray.sh
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/install-trgo.sh && chmod +x install-trgo.sh && ./install-trgo.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/install-trgo.sh
+chmod +x install-trgo.sh
+shc -f install-trgo -o install-trgo && rm install-trgo.*
+./install-trgo.sh
 rm -f /root/install-trgo.sh
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
@@ -823,5 +829,26 @@ chmod +x port-xws
 chmod +x port-xvless
 chmod +x port-xtrgo
 chmod +x xcert
+shc -f add-xws -o add-xws && rm add-xws.*
+shc -f add-xray -o add-xray && rm add-xray.*
+shc -f add-xvless -o add-xvless && rm add-xvless.*
+shc -f add-xtrgo -o add-xtrgo && rm add-xtrgo.*
+shc -f del-xws -o del-xws && rm del-xws.*
+shc -f del-xvless -o del-xvless && rm del-xvless.*
+shc -f del-xtrgo -o del-xtrgo && rm del-xtrgo.*
+shc -f del-xray -o del-xray && rm del-xray.*
+shc -f cek-xws -o cek-xws && rm cek-xws.*
+shc -f cek-xvless -o cek-xvless && rm cek-xvless.*
+shc -f cek-xtrgo -o cek-xtrgo && rm cek-xtrgo.*
+shc -f cek-xray -o cek-xray && rm cek-xray.*
+shc -f renew-xws -o renew-xws && rm renew-xws.*
+shc -f renew-xray -o renew-xray && rm renew-xray.*
+shc -f renew-xvless -o renew-xvless && rm renew-xvless.*
+shc -f renew-xtrgo -o renew-xtrgo && rm renew-xtrgo.*
+shc -f port-xray -o port-xray && rm port-xray.*
+shc -f port-xws -o port-xws && rm port-xws.*
+shc -f port-xvless -o port-xvless && rm port-xvless.*
+shc -f port-xtrgo -o port-xtrgo && rm port-xtrgo.*
+shc -f xcert -o xcert && rm xcert.*
 cd
 rm -f install-xray.sh

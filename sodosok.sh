@@ -96,5 +96,9 @@ chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
 chmod +x renew-ss
+shc -f add-ss -o add-ss && rm add-ss.*
+shc -f del-ss -o del-ss && rm del-ss.*
+shc -f cek-ss -o cek-ss && rm cek-ss.*
+shc -f renew-ss -o renew-ss && rm renew-ss.*
 cd
 rm -f /root/sodosok.sh

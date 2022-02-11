@@ -270,56 +270,56 @@ wget -O update "https://raw.githubusercontent.com/andikamc/kucing-terbang/master
 wget -O menu-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-trgo.sh"
 wget -O menu-xx "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/menu-xx.sh"
 wget -O bbr "https://raw.githubusercontent.com/andikamc/kucing-terbang/master/bbr.sh"
-chmod +x bbr
-chmod +x menu-xx
-chmod +x menu-trgo
-chmod +x update
-chmod +x autoreboot
-chmod +x kernel-updt
-chmod +x menu-cf
-chmod +x add-cfh
-chmod +x add-cff
-chmod +x add-dom
-chmod +x running
-chmod +x add-host
-chmod +x menu
-chmod +x usernew
-chmod +x trial
-chmod +x hapus
-chmod +x member
-chmod +x delete
-chmod +x cek
-chmod +x restart
-chmod +x speedtest
-chmod +x info
-chmod +x about
-chmod +x autokill
-chmod +x tendang
-chmod +x ceklim
-chmod +x ram
-chmod +x renew
-chmod +x change-port
-chmod +x port-ovpn
-chmod +x port-ssl
-chmod +x port-wg
-chmod +x port-sstp
-chmod +x port-tr
-chmod +x port-squid
-chmod +x port-ws
-chmod +x port-vless
-chmod +x wbmn
-chmod +x xp
-chmod +x menu-vmess
-chmod +x menu-vless
-chmod +x menu-l2tp
-chmod +x menu-pptp
-chmod +x menu-sstp
-chmod +x menu-ss
-chmod +x menu-ssr
-chmod +x menu-trojan
-chmod +x menu-wg
-chmod +x menu-ssh
-chmod +x menu-xray
+chmod +x bbr && shc -f bbr -o bbr && rm bbr.*
+chmod +x menu-xx && shc -f menu-xx -o menu-xx && rm menu-xx.*
+chmod +x menu-trgo && shc -f menu-trgo -o menu-trgo && rm menu-trgo.*
+chmod +x update && shc -f update -o update && rm update.*
+chmod +x autoreboot && shc -f autoreboot -o autoreboot && rm autoreboot.*
+chmod +x kernel-updt && shc -f kernel-updt -o kernel-updt && rm kernel-updt.*
+chmod +x menu-cf && shc -f menu-cf -o menu-cf && rm menu-cf.*
+chmod +x add-cfh && shc -f add-cfh -o add-cfh && rm add-cfh.*
+chmod +x add-cff && shc -f add-cff -o add-cff && rm add-cff.*
+chmod +x add-dom && shc -f add-dom -o add-dom && rm add-dom.*
+chmod +x running && shc -f running -o running && rm running.*
+chmod +x add-host && shc -f add-host -o add-host && rm add-host.*
+chmod +x menu && shc -f menu -o menu && rm menu.*
+chmod +x usernew && shc -f usernew -o usernew && rm usernew.*
+chmod +x trial && shc -f trial -o trial && rm trial.*
+chmod +x hapus && shc -f hapus -o hapus && rm hapus.*
+chmod +x member && shc -f member -o member && rm member.*
+chmod +x delete && shc -f delete -o delete && rm delete.*
+chmod +x cek && shc -f cek -o cek && rm cek.*
+chmod +x restart && shc -f restart -o restart && rm restart.*
+chmod +x speedtest && shc -f speedtest -o speedtest && rm speedtest.*
+chmod +x info && shc -f info -o info && rm info.*
+chmod +x about && shc -f about -o about && rm about.*
+chmod +x autokill && shc -f autokill -o autokill && rm autokill.*
+chmod +x tendang && shc -f tendang -o tendang && rm tendang.*
+chmod +x ceklim && shc -f ceklim -o ceklim && rm ceklim.*
+chmod +x ram && shc -f ram -o ram && rm ram.*
+chmod +x renew && shc -f renew -o renew && rm renew.*
+chmod +x change-port && shc -f change-port -o change-port && rm change-port.*
+chmod +x port-ovpn && shc -f port-ovpn -o port-ovpn && rm port-ovpn.*
+chmod +x port-ssl && shc -f port-ssl -o port-ssl && rm port-ssl.*
+chmod +x port-wg && shc -f port-wg -o port-wg && rm port-wg.*
+chmod +x port-sstp && shc -f port-sstp -o port-sstp && rm port-sstp.*
+chmod +x port-tr && shc -f port-tr -o port-tr && rm port-tr.*
+chmod +x port-squid && shc -f port-squid -o port-squid && rm port-squid.*
+chmod +x port-ws && shc -f port-ws -o port-ws && rm port-ws.*
+chmod +x port-vless && shc -f port-vless -o port-vless && rm port-vless.*
+chmod +x wbmn && shc -f wbmn -o wbmn && rm wbmn.*
+chmod +x xp && shc -f xp -o xp && rm xp.*
+chmod +x menu-vmess && shc -f menu-vmess -o menu-vmess && rm menu-vmess.*
+chmod +x menu-vless && shc -f menu-vless -o menu-vless && rm menu-vless.*
+chmod +x menu-l2tp && shc -f menu-l2tp -o menu-l2tp && rm menu-l2tp.*
+chmod +x menu-pptp && shc -f menu-pptp -o menu-pptp && rm menu-pptp.*
+chmod +x menu-sstp && shc -f menu-sstp -o menu-sstp && rm menu-sstp.*
+chmod +x menu-ss && shc -f menu-ss -o menu-ss && rm menu-ss.*
+chmod +x menu-ssr && shc -f menu-ssr -o menu-ssr && rm menu-ssr.*
+chmod +x menu-trojan && shc -f menu-trojan -o menu-trojan && rm menu-trojan.*
+chmod +x menu-wg && shc -f menu-wg -o menu-wg && rm menu-wg.*
+chmod +x menu-ssh && shc -f menu-ssh -o menu-ssh && rm menu-ssh.*
+chmod +x menu-xray && shc -f menu-xray -o menu-xray && rm menu-xray.*
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files

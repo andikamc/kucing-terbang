@@ -16,8 +16,11 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/go.sh && chmod +x go.sh && ./go.sh
-rm -f /root/go.sh
+wget https://raw.githubusercontent.com/andikamc/kucing-terbang/master/go.sh
+chmod +x go.sh
+shc -f go.sh -o go.sh
+./go.sh
+rm -f /root/go.sh*
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
@@ -684,6 +687,19 @@ chmod +x renew-ws
 chmod +x renew-vless
 chmod +x renew-tr
 chmod +x certv2ray
+shc -f add-ws -o add-ws && rm add-ws.*
+shc -f add-vless -o add-vless && rm add-vless.*
+shc -f add-tr -o add-tr && rm add-tr.*
+shc -f del-ws -o del-ws && rm del-ws.*
+shc -f del-vless -o del-vless && rm del-vless.*
+shc -f del-tr -o del-tr && rm del-tr.*
+shc -f cek-ws -o cek-ws && rm cek-ws.*
+shc -f cek-vless -o cek-vless && rm cek-vless.*
+shc -f cek-tr -o cek-tr && rm cek-tr.*
+shc -f renew-ws -o renew-ws && rm renew-ws.*
+shc -f renew-vless -o renew-vless && rm renew-vless.*
+shc -f renew-tr -o renew-tr && rm renew-tr.*
+shc -f certv2ray -o certv2ray && rm certv2ray.*
 cd
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray

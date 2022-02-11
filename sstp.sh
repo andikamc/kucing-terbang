@@ -61,9 +61,9 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 #input perintah sstp
-wget -O /usr/bin/add-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-sstp.sh && chmod +x /usr/bin/add-sstp
-wget -O /usr/bin/del-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-sstp.sh && chmod +x /usr/bin/del-sstp
-wget -O /usr/bin/cek-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
-wget -O /usr/bin/renew-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
+wget -O /usr/bin/add-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/add-sstp.sh && chmod +x /usr/bin/add-sstp && shc -f /usr/bin/add-sstp -o /usr/bin/add-sstp && rm /usr/bin/add-sstp.*
+wget -O /usr/bin/del-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/del-sstp.sh && chmod +x /usr/bin/del-sstp && shc -f /usr/bin/del-sstp -o /usr/bin/del-sstp && rm /usr/bin/del-sstp.*
+wget -O /usr/bin/cek-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/cek-sstp.sh && chmod +x /usr/bin/cek-sstp && shc -f /usr/bin/cek-sstp -o /usr/bin/cek-sstp && rm /usr/bin/cek-sstp.*
+wget -O /usr/bin/renew-sstp https://raw.githubusercontent.com/andikamc/kucing-terbang/master/renew-sstp.sh && chmod +x /usr/bin/renew-sstp && shc -f /usr/bin/renew-sstp -o /usr/bin/renew-sstp && rm /usr/bin/renew-sstp.*
 rm -f /root/sstp.sh
 
