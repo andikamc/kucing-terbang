@@ -7,6 +7,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ip_addr | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 clear
+echo "Starting Setup Installer ..."
 else
 echo "Whoops 😘"
 sleep 15
