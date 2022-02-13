@@ -2,7 +2,17 @@
 clear
 echo "VPS Script Installer by DK-NET"
 clear
-sleep 5
+#
+MYIP=$(wget -qO- ipinfo.io/ip);
+IZIN=$( curl https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ip_addr | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+clear
+else
+echo "Whoops 😘"
+exit 0
+fi
+#
+sleep 3
 sudo apt update
 sudo apt upgrade -y --fix-missing
 update-grub
