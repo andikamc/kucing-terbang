@@ -1,14 +1,15 @@
 #!/bin/sh
 clear
 echo "VPS Script Installer by DK-NET"
-clear
 #
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://raw.githubusercontent.com/andikamc/kucing-terbang/master/ip_addr | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
+sleep 15
 clear
 else
 echo "Whoops 😘"
+sleep 15
 exit 0
 fi
 #
