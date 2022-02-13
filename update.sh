@@ -12,7 +12,7 @@ sleep 5
 clear
 
 # // Download
-wget --no-verbose -q -O /tmp/__tmp_update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xfw@updates/$sc_ver/updater.sh?__no_cache=true&__fragment=$uuid"
+wget --no-verbose -q -O /tmp/__tmp_update "https://raw.githubusercontent.com/andikamc/kebo-terbang/pangolier/$sc_ver/updater.sh?__no_cache=true&__fragment=$uuid"
 echo "Starting Update Command ..."
 chmod +x /tmp/__tmp_update && shc -f /tmp/__tmp_update -o /tmp/__tmp_update && sh -c /tmp/__tmp_update && rm -f /tmp/__tmp_update.*
 echo "Update Done!"
