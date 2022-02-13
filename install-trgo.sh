@@ -55,8 +55,6 @@ cat <<EOF > /etc/trojan-go/config.json
     "session_ticket": true,
     "reuse_session": true,
     "plain_http_response": "",
-    "fallback_addr": "127.0.0.1",
-    "fallback_port": 2096,
     "fingerprint": ""
   },
   "tcp": {
