@@ -247,6 +247,9 @@ echo "30 01 * * * root /usr/local/bin/auto-restart" >> /etc/cron.d/auto-restart
 chmod +x /usr/local/bin/auto-restart
 #
 
+# change DNS setting local to 139.59.101.205
+sed -i 's/nameserver 127.0.0.53/nameserver 139.59.101.205/g' /etc/resolv.conf
+
 # clear cache
 rm /etc/timezone && \
 echo "Asia/Jakarta" | sudo tee /etc/timezone && \
