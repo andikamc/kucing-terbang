@@ -8,7 +8,8 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 clear
 echo "Starting Update ..."
-sleep 5
+sleep 3
+apt -y update
 clear
 
 # // Download
