@@ -11,15 +11,6 @@ rm /usr/bin/update
 wget -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
 chmod +x /usr/bin/update && shc -f /usr/bin/update -o /usr/bin/update && rm /usr/bin/update.*
 #######################################################################################################
-
-wget -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu-trgo.sh" && chmod +x /usr/bin/menu-trgo && shc -f /usr/bin/menu-trgo -o /usr/bin/menu-trgo && rm /usr/bin/menu-trgo.*
-wget -O /usr/bin/add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-trgo.sh" && chmod +x /usr/bin/add-trgo && shc -f /usr/bin/add-trgo -o /usr/bin/add-trgo && rm /usr/bin/add-trgo.*
-wget -O /usr/bin/del-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-trgo.sh" && chmod +x /usr/bin/del-trgo && shc -f /usr/bin/del-trgo -o /usr/bin/del-trgo && rm /usr/bin/del-trgo.*
-wget -O /usr/bin/cek-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-trgo.sh" && chmod +x /usr/bin/cek-trgo && shc -f /usr/bin/cek-trgo -o /usr/bin/cek-trgo && rm /usr/bin/cek-trgo.*
-wget -O /usr/bin/renew-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-trgo.sh" && chmod +x /usr/bin/renew-trgo && shc -f /usr/bin/renew-trgo -o /usr/bin/renew-trgo && rm /usr/bin/renew-trgo.*
-wget -O /usr/bin/port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh" && chmod +x /usr/bin/port-trgo && shc -f /usr/bin/port-trgo -o /usr/bin/port-trgo && rm /usr/bin/port-trgo.*
-
-#######################################################################################################
 sync; echo 3 > /proc/sys/vm/drop_caches
 systemd-resolve --flush-caches
 #
