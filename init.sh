@@ -10,7 +10,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo apt install -y wget bzip2 gzip build-essential coreutils screen curl shc gcc
 cd /tmp
-wget -O /tmp/setup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/setup.sh"
+wget --no-verbose -q -O /tmp/setup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/setup.sh"
 chmod +x /tmp/setup
 shc -f /tmp/setup -o /tmp/setup && rm /tmp/setup.* && sh -c /tmp/setup
 rm -rf ./setup*

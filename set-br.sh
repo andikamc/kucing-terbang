@@ -2,9 +2,9 @@
 
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/restore.sh"
+wget --no-verbose -q -O autobackup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/autobackup.sh"
+wget --no-verbose -q -O backup "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/backup.sh"
+wget --no-verbose -q -O restore "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/restore.sh"
 chmod +x autobackup
 shc -f autobackup -o autobackup && rm autobackup.*
 chmod +x backup

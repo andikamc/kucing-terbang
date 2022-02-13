@@ -4,7 +4,7 @@ sc_ver=$(cat /home/ver)
 
 #
 rm /usr/bin/update
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
+wget --no-verbose -q -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
 chmod +x /usr/bin/update && shc -f /usr/bin/update -o /usr/bin/update && rm /usr/bin/update.*
 
 # change version

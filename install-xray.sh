@@ -7,9 +7,9 @@ domain=$(cat /etc/v2ray/domain)
 mkdir -p /usr/local/xray/
 
 # // Installation XRay Core
-wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xray-mini" 
-wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/geosite.dat"
-wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/geoip.dat"
+wget --no-verbose -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xray-mini" 
+wget --no-verbose -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/geosite.dat"
+wget --no-verbose -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/geoip.dat"
 chmod +x /usr/local/xray/xray
 
 # // Make XRay Mini Root Folder
@@ -54,12 +54,12 @@ WantedBy=multi-user.target
 EOF
 
 # // Installing Tr0jan-GO
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/plugin-xray.sh
+wget --no-verbose -q https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/plugin-xray.sh
 chmod +x plugin-xray.sh
 shc -f plugin-xray -o plugin-xray && rm plugin-xray.*
 ./plugin-xray.sh
 rm -f /root/plugin-xray.sh
-wget https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/install-trgo.sh
+wget --no-verbose -q https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/install-trgo.sh
 chmod +x install-trgo.sh
 shc -f install-trgo -o install-trgo && rm install-trgo.*
 ./install-trgo.sh
@@ -787,27 +787,27 @@ systemctl restart xray
 systemctl enable xray
 systemctl start xray
 cd /usr/bin
-wget -O add-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xws.sh"
-wget -O add-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xray.sh"
-wget -O add-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xvless.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-trgo.sh"
-wget -O del-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xws.sh"
-wget -O del-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xvless.sh"
-wget -O del-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xray.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-trgo.sh"
-wget -O cek-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xws.sh"
-wget -O cek-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xvless.sh"
-wget -O cek-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xray.sh"
-wget -O cek-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-trgo.sh"
-wget -O renew-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xws.sh"
-wget -O renew-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xray.sh"
-wget -O renew-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xvless.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-trgo.sh"
-wget -O xcert "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xcert.sh"
-wget -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh"
-wget -O port-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xvless.sh"
-wget -O port-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xws.sh"
-wget -O port-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xray.sh"
+wget --no-verbose -q -O add-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xws.sh"
+wget --no-verbose -q -O add-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xray.sh"
+wget --no-verbose -q -O add-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-xvless.sh"
+wget --no-verbose -q -O add-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-trgo.sh"
+wget --no-verbose -q -O del-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xws.sh"
+wget --no-verbose -q -O del-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xvless.sh"
+wget --no-verbose -q -O del-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-xray.sh"
+wget --no-verbose -q -O del-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-trgo.sh"
+wget --no-verbose -q -O cek-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xws.sh"
+wget --no-verbose -q -O cek-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xvless.sh"
+wget --no-verbose -q -O cek-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-xray.sh"
+wget --no-verbose -q -O cek-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-trgo.sh"
+wget --no-verbose -q -O renew-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xws.sh"
+wget --no-verbose -q -O renew-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xray.sh"
+wget --no-verbose -q -O renew-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-xvless.sh"
+wget --no-verbose -q -O renew-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-trgo.sh"
+wget --no-verbose -q -O xcert "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/xcert.sh"
+wget --no-verbose -q -O port-trgo "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-trgo.sh"
+wget --no-verbose -q -O port-xvless "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xvless.sh"
+wget --no-verbose -q -O port-xws "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xws.sh"
+wget --no-verbose -q -O port-xray "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/port-xray.sh"
 chmod +x add-xws
 chmod +x add-xray
 chmod +x add-xvless

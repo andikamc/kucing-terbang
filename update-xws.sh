@@ -5,10 +5,10 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 #######################################################################################################cd /usr/bin
 rm /usr/bin/menu
-wget -O /usr/bin/menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu.sh"
+wget --no-verbose -q -O /usr/bin/menu "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/menu.sh"
 chmod +x /usr/bin/menu && shc -f /usr/bin/menu -o /usr/bin/menu && rm /usr/bin/menu.*
 rm /usr/bin/update
-wget -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
+wget --no-verbose -q -O /usr/bin/update "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/update.sh"
 chmod +x /usr/bin/update && shc -f /usr/bin/update -o /usr/bin/update && rm /usr/bin/update.*
 #######################################################################################################
 sync; echo 3 > /proc/sys/vm/drop_caches

@@ -89,10 +89,10 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O add-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-wg.sh"
+wget --no-verbose -q -O add-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/add-wg.sh"
+wget --no-verbose -q -O del-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/del-wg.sh"
+wget --no-verbose -q -O cek-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/cek-wg.sh"
+wget --no-verbose -q -O renew-wg "https://raw.githubusercontent.com/andikamc/kucing-terbang/kucingku/renew-wg.sh"
 chmod +x add-wg && shc -f add-wg -o add-wg && rm add-wg.*
 chmod +x del-wg && shc -f del-wg -o del-wg && rm del-wg.*
 chmod +x cek-wg && shc -f cek-wg -o cek-wg && rm cek-wg.*
