@@ -217,6 +217,7 @@ echo ""  | tee -a log-install.txt
 echo ""
 cp log-install.txt /root/log-install.txt
 sh -c /usr/bin/certv2ray
+sh -c /usr/bin/update
 
 #
 # Clear Memory Command
